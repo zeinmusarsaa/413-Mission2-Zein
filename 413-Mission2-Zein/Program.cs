@@ -1,4 +1,5 @@
 ﻿using System;
+//Zein Mosarsaa 4-3, Dice rolling simulator that portrays astrisks that represent 1% of the total num of rolls.
 
 namespace DiceRollingSimulator
 {
@@ -23,7 +24,7 @@ namespace DiceRollingSimulator
             for (int i = 2; i <= 12; i++)
             {
                 Console.Write($"{i}: ");
-                // I found that having one united one results in different asterisks that don'e seem compatible
+                // I found that having one united one results in different asterisks that don't seem compatible
                 //with the number of rolls. For example I was getting over 100 asterisks for a dice roll of 5
                 // For those with less than 100:
                 if (numberOfRolls < 100)
@@ -48,7 +49,7 @@ namespace DiceRollingSimulator
             public static int[] RollDices(int numberOfRolls)
             {
                 Random random = new Random();
-
+                //indexes 0 and 1 are ignored
                 int[] results = new int[13]; 
 
                 for (int i = 0; i < numberOfRolls; i++)
