@@ -24,19 +24,14 @@ namespace DiceRollingSimulator
             for (int i = 2; i <= 12; i++)
             {
                 Console.Write($"{i}: ");
-                // I found that having one united one results in different asterisks that don't seem compatible
-                //with the number of rolls. For example I was getting over 100 asterisks for a dice roll of 5
-                // For those with less than 100:
-                if (numberOfRolls < 100)
-                {
-                    // For fewer rolls, display asterisks corresponding to the actual count
-                    Console.WriteLine(new String('*', results[i]));
-                }
-                else //those more than 100
-                {
-                    int asterisksCount = (results[i] * 100) / numberOfRolls;
-                    Console.WriteLine(new String('*', asterisksCount));
-                }
+
+                // Calculate the percentage of this roll in all rolls
+                double percentage = (double)results[i] / numberOfRolls * 100;
+
+                // Round the percentage to the nearest whole number for asterisks
+                int asterisksCount = (int)Math.Round(percentage);
+
+                Console.WriteLine(new String('*', asterisksCount));
             }
 
 
