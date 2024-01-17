@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+using System;
+>>>>>>> f1117587670bf6f6beffc0b760aed8fe3394604d
 //Zein Mosarsaa 4-3, Dice rolling simulator that portrays astrisks that represent 1% of the total num of rolls.
 
 namespace DiceRollingSimulator
@@ -36,6 +40,7 @@ namespace DiceRollingSimulator
 
 
 
+
             Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
         }
 
@@ -59,7 +64,6 @@ namespace DiceRollingSimulator
         }
     }
 }
-
 
 
 
